@@ -11,11 +11,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @SWG\Definition(type="object", @SWG\Xml(name="Order"), required={"user_id","status","source", "destination"})
  *
  * @SWG\Property(type="integer", property="user_id", description="The user identifier for the order.")
- * @SWG\Property(type="number", property="status", description="The status identifier for the order.")
- * @SWG\Property(type="integer", property="source", description="The source identifier for the order.")
+ * @SWG\Property(type="string", property="status", description="The status identifier for the order.")
+ * @SWG\Property(type="string", property="source", description="The source identifier for the order.")
  * @SWG\Property(type="string", property="destination", description="The destination on the order.")
  * @SWG\Property(type="string", property="pick_time", description="The pick time on the order.")
- * @SWG\Property(type="string", property="delivery_cost", description="The delivery cost on the order.")
  * @SWG\Property(type="string", property="discount", description="The discount on the order.")
  * @SWG\Property(type="string", property="total", description="The total amount of the order.")
  *
@@ -44,7 +43,7 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'status', 'source', 'destination'
+        'user_id', 'status', 'source', 'destination', 'total', 'discount', 'pick_time'
     ];
 
     /**

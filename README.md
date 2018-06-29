@@ -1,5 +1,3 @@
-# foodBackAPI
-
 ### setup project
 
  - Clone repository
